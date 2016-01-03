@@ -47,6 +47,8 @@
             this.eyesClosed = new System.Windows.Forms.TrackBar();
             this.close = new System.Windows.Forms.Button();
             this.tts = new System.Windows.Forms.Button();
+            this.btnMouth = new System.Windows.Forms.Button();
+            this.btnEyes = new System.Windows.Forms.Button();
             this.systemSettings.SuspendLayout();
             this.bearPositions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mouthOpened)).BeginInit();
@@ -240,11 +242,35 @@
             this.tts.UseVisualStyleBackColor = true;
             this.tts.Click += new System.EventHandler(this.tts_Click);
             // 
+            // btnMouth
+            // 
+            this.btnMouth.Location = new System.Drawing.Point(27, 324);
+            this.btnMouth.Name = "btnMouth";
+            this.btnMouth.Size = new System.Drawing.Size(75, 23);
+            this.btnMouth.TabIndex = 7;
+            this.btnMouth.Text = "Mouth";
+            this.btnMouth.UseVisualStyleBackColor = true;
+            this.btnMouth.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnMouth_MouseDown);
+            this.btnMouth.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnMouth_MouseUp);
+            // 
+            // btnEyes
+            // 
+            this.btnEyes.Location = new System.Drawing.Point(112, 324);
+            this.btnEyes.Name = "btnEyes";
+            this.btnEyes.Size = new System.Drawing.Size(75, 23);
+            this.btnEyes.TabIndex = 8;
+            this.btnEyes.Text = "Eyes";
+            this.btnEyes.UseVisualStyleBackColor = true;
+            this.btnEyes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEyes_MouseDown);
+            this.btnEyes.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnEyes_MouseUp);
+            // 
             // BearDuinoMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 386);
+            this.Controls.Add(this.btnEyes);
+            this.Controls.Add(this.btnMouth);
             this.Controls.Add(this.tts);
             this.Controls.Add(this.close);
             this.Controls.Add(this.bearPositions);
@@ -285,7 +311,8 @@
         private System.Windows.Forms.TrackBar eyesClosed;
         private System.Windows.Forms.Button close;
         private System.Windows.Forms.Button tts;
-
+        private System.Windows.Forms.Button btnMouth;
+        private System.Windows.Forms.Button btnEyes;
     }
 }
 

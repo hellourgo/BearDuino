@@ -127,5 +127,25 @@ namespace BearDuino
             var BearDuinoTts = new BearDuinoTts();
             BearDuinoTts.Show();
         }
+
+        private void btnMouth_MouseDown(object sender, EventArgs e)
+        {
+            BearDuino.Bear.SendPosition(_mouthOpened);
+        }
+
+        private void btnMouth_MouseUp(object sender, EventArgs e)
+        {
+            BearDuino.Bear.SendPosition(_eyesOpened);
+        }
+
+        private void btnEyes_MouseDown(object sender, EventArgs e)
+        {
+            BearDuino.Bear.SendPosition(_eyesClosed);
+        }
+
+        private void btnEyes_MouseUp(object sender, EventArgs e)
+        {
+            BearDuino.Bear.SendPosition(_eyesOpened);
+        }
     }
 }
